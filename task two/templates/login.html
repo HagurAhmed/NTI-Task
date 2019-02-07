@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Task Two </title>
+   
+</head>
+
+<body>
+    <form action = "http://localhost:5000/train" method = "post" target="_blank">
+        
+        <b>Choose the algorithm:</b><br><br>
+        <input type="radio" name="classifier" value=1 > Logistic regression<br> <!-- checked*/ -->
+        <input type="radio" name="classifier" value=2> KNN <br>
+        <input type="radio" name="classifier" value=3> Decision tree <br>
+        <input type="radio" name="classifier" value=4> Random forest  <br><br>
+        
+        <input type="submit" value="Train"> <br><br>
+
+    </form>
+
+   
+    <form action = "http://localhost:5000/model_evaluation" method = "post" target="_blank">
+        <input type="submit" value="Get model evaluation"> <br><br>
+
+    </form>
+
+
+    <form action = "http://localhost:5000/test_row" method = "post" target="_blank">
+        <br>
+        <b>Input the test data:</b><br>
+        SeniorCitizen   :<br> 
+        <select name="sen">
+            <option value="0">0</option>
+            <option value="1">1</option>
+        </select>
+        <br>
+        Partner         :<br> 
+        <select name="part">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br>
+        Dependents      :<br> 
+        <select name="dep">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br>
+        tenure          :<br> <input type="text" name="tenure" value=><br>
+        PhoneService    :<br> 
+        <select name="phon">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br>
+
+        MultipleLines   :<br> 
+        <select name="mult">
+            <option value="0">No</option>
+            <option value="1">No phone service</option>
+            <option value="2">Yes</option>
+        </select>
+        <br>
+        InternetService :<br> 
+        <select name="intr">
+            <option value="0">DSL</option>
+            <option value="1">Fiber optic</option>
+            <option value="2">No</option>
+        </select>
+        <br>
+
+        OnlineSecurity  :<br> 
+        <select name="onl">
+            <option value="0">No</option>
+            <option value="1">No internet service</option>
+            <option value="2">Yes</option>
+        </select>
+        <br>
+    
+        <input type="submit" value="Pridect"> <br>
+            
+    </form>
+
+</body>
+</html>
